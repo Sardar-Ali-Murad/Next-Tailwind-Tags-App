@@ -26,7 +26,10 @@ const Comments = () => {
 
   const handleSubmitMessage = async () => {
     try {
-      await axios.post("http://localhost:5000/api/v1/tagsMessage", data);
+      await axios.post(
+        "https://tags-backend.vercel.app/api/v1/tagsMessage",
+        data
+      );
       toast.success("Message is created successfully", {
         position: toast.POSITION.TOP_RIGHT,
       });
@@ -48,7 +51,7 @@ const Comments = () => {
     const getAllMessages = async () => {
       try {
         let { data } = await axios.get(
-          "http://localhost:5000/api/v1/tagsMessage"
+          "https://tags-backend.vercel.app/api/v1/tagsMessage"
         );
         let info = data.data.sort(
           (a, b) => new Date(b.createdAt) - new Date(a.createdAt)

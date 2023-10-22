@@ -10,7 +10,7 @@ const Footer = () => {
 
   const handleSubmit = async () => {
     try {
-      await axios.post("http://localhost:5000/api/v1/auth/email", {
+      await axios.post("https://tags-backend.vercel.app/api/v1/auth/email", {
         email: email,
       });
       toast.success("Thank you for subscribing to the newletter ", {
