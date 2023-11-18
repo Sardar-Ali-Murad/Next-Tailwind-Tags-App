@@ -2,27 +2,12 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import gift from "../../public/gift.png";
-import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const Footer = () => {
   let [email, setEmail] = useState("");
 
-  const handleSubmit = async () => {
-    try {
-      await axios.post("https://tags-backend.vercel.app/api/v1/auth/email", {
-        email: email,
-      });
-      toast.success("Thank you for subscribing to the newletter ", {
-        position: toast.POSITION.TOP_RIGHT,
-      });
-      setEmail("");
-    } catch (error) {
-      toast.error(error.response.data.msg, {
-        position: toast.POSITION.TOP_RIGHT,
-      });
-    }
-  };
+  const handleSubmit = async () => {};
   return (
     <div className="bg-[#36454F] text-center text-white flex flex-col gap-[30px] pt-[40px]">
       <ToastContainer />
@@ -31,7 +16,7 @@ const Footer = () => {
         Get updates about new music, upcoming promotions, and exclusive freebies
       </p>
       <div className="flex flex-row justify-center items-center">
-        <Image src={gift} className="h-[60px] w-[60px] " />
+        <Image src={gift} className="h-[60px] w-[60px] " alt="gift" />
       </div>
       <div className="flex flex-row items-center gap-[20px]  md:ml-[50%] md:translate-x-[-50%] lg:ml-[50%] lg:translate-x-[-50%] px-[50px]">
         <input
@@ -56,7 +41,16 @@ const Footer = () => {
       </p>
       <div className="h-[1px] w-[100%] bg-white "></div>
       <p className="text-center text-gray-100 pb-[10px]">
-        © 2023 TunePocket All Rights Reserved
+        © 2023 Tags Generator by{" "}
+        <span
+          className="underline cursor-pointer px-[3px]"
+          onClick={() => {
+            window.open("https://sardar.live", "__blank");
+          }}
+        >
+          Sardar Ali Murad
+        </span>{" "}
+        All Rights Reserved
       </p>
     </div>
   );
