@@ -27,7 +27,7 @@ const Hero = () => {
           url: `https://tags-generator.p.rapidapi.com/youtubeTags/${query}`,
           headers: {
             "X-RapidAPI-Key":
-              "1a6a14f906msh85ed0e73a2ad273p120c4fjsn8cfd1188c678",
+              "de47ac1912mshde13f25f720f215p186f6cjsn0a1dc5096334",
             "X-RapidAPI-Host": "tags-generator.p.rapidapi.com",
           },
         };
@@ -47,7 +47,7 @@ const Hero = () => {
           url: `https://tags-generator.p.rapidapi.com/tiktokTags/${query}`,
           headers: {
             "X-RapidAPI-Key":
-              "1a6a14f906msh85ed0e73a2ad273p120c4fjsn8cfd1188c678",
+              "de47ac1912mshde13f25f720f215p186f6cjsn0a1dc5096334",
             "X-RapidAPI-Host": "tags-generator.p.rapidapi.com",
           },
         };
